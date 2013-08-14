@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+    <fieldset name="details">
+        <field 
+            name="title"
+            type="text"
+            label="COM_POECOM_FLYER_BLOCK_TITLE"
+            default=""
+            class="inputbox"
+        />
+    <field
+        name="template"
+        type="filelist"
+        label="COM_POECOM_FLYER_BLOCK_TEMPLATE"
+        description=""
+        directory="administrator/components/com_poecom/assets/flyer"
+        filter=".tpl"
+        class="inputbox"
+        default=""
+    />
+    <field
+        name="product_id"
+        type="productlistmodal"
+        label="COM_POECOM_PRODUCT"
+        description=""
+        class="inputbox"
+        default=""
+    />
+    <field
+        name="content"
+        type="editor"
+        label="COM_POECOM_FLYER_BLOCK_CONTENT"
+        description="COM_POECOM_FLYER_BLOCK_CONTENT_D"
+        buttons="article,image,pagebreak,readmore"
+        filter="raw"
+        class="inputbox"
+        default=""
+    />
+    </fieldset>
+    <fieldset name="hidden">
+      <field name="id" type="hidden" default=""/>
+      <field name="published" type="hidden" default="1"/>
+    </fieldset>   
+</form>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+
+    <fieldset name="details" label="COM_POECOM_CUSTOMER_DETAILS">
+        <field
+            name="id"
+            type="text"
+            label="COM_POECOM_JUSER"
+            description=""
+            class="inputbox"
+            readonly="true"
+        />
+        <field
+            name="name"
+            type="text"
+            label="COM_POECOM_CUSTOMER_NAME"
+            description=""
+            size="30"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+        <field
+            name="username"
+            type="text"
+            label="COM_POECOM_CUSTOMER_USERNAME"
+            description=""
+            size="30"
+            class="inputbox"
+            readonly="true"
+        />
+        <field
+            name="email"
+            type="email"
+            label="COM_POECOM_CUSTOMER_EMAIL"
+            description=""
+            size="30"
+            class="inputbox"
+            required="true"
+        />
+         
+    </fieldset>
+    <fieldset name="btaddress" label="COM_POECOM_USER_BT"
+            addfieldpath="/administrator/components/com_poecom/models/fields"
+    >
+    <field name="fname"
+        type="text"
+        label="COM_POECOM_USER_FNAME"
+        size="25"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="lname"
+        type="text"
+        label="COM_POECOM_USER_LNAME"
+        size="25"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="street1"
+        type="text"
+        label="COM_POECOM_USER_STREET1"
+        size="25"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="street2"
+        type="text"
+        label="COM_POECOM_USER_STREET2"
+        size="25"
+        required="false"
+        class="poe-btaddress"
+    />
+    <field name="city"
+        type="text"
+        label="COM_POECOM_USER_CITY"
+        size="25"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="country_id"
+        type="countrylist"
+        enabled="1"
+        default="38"
+        label="COM_POECOM_USER_COUNTRY"
+        onchange="updateRegions('BT')"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="region_id"
+        type="regionlist"
+        countryid="38"
+        label="COM_POECOM_USER_REGION"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="postal_code"
+        type="text"
+        label="COM_POECOM_USER_POSTAL"
+        size="10"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="telephone"
+        type="tel"
+        label="COM_POECOM_USER_TELEPHONE"
+        size="20"
+        required="true"
+        class="poe-btaddress"
+    />
+    </fieldset>
+    <fieldset name="shiptobill" label="COM_POECOM_USER_ST"
+		addfieldpath="/administrator/components/com_poecom/models/fields"
+	>
+        <field name="stbt_same"
+            type="radio"
+            label="COM_POECOM_USER_STBT_SAME"
+            required="true"
+            default="1"
+            >
+            <option value="0" onclick="toggleSTFields()">JNO</option>
+            <option value="1" onclick="toggleSTFields()">JYES</option>
+        </field>
+        <fieldset name="staddress" label="COM_POECOM_USER_ST"
+                addfieldpath="/administrator/components/com_poecom/models/fields"
+        >
+
+        <field name="st_fname"
+            type="text"
+            label="COM_POECOM_USER_FNAME"
+            size="25"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_lname"
+            type="text"
+            label="COM_POECOM_USER_LNAME"
+            size="25"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_street1"
+            type="text"
+            label="COM_POECOM_USER_STREET1"
+            size="25"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_street2"
+            type="text"
+            label="COM_POECOM_USER_STREET2"
+            size="25"
+            required="false"
+            class="poe-staddress"
+        />
+        <field name="st_city"
+            type="text"
+            label="COM_POECOM_USER_CITY"
+            size="25"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_country_id"
+            type="countrylist"
+            enabled="1"
+            default="38"
+            label="COM_POECOM_USER_COUNTRY"
+            onchange="updateRegions('ST')"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_region_id"
+            type="regionlist"
+            countryid="38"
+            label="COM_POECOM_USER_REGION"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_postal_code"
+            type="text"
+            label="COM_POECOM_USER_POSTAL"
+            size="10"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_telephone"
+            type="tel"
+            label="COM_POECOM_USER_TELEPHONE"
+            size="20"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        </fieldset>
+    </fieldset>
+    <fieldset name="hidden">
+        <field type="hidden" name="btid" default=""/>
+        <field type="hidden" name="stid" default=""/>
+    </fieldset>   
+</form>

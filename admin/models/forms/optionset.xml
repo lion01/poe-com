@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+    <fieldset name="details">
+    <field
+        name="name"
+        type="text"
+        label="COM_POECOM_OPTIONSET_NAME"
+        description="COM_POECOM_OPTIONSET_NAME_D"
+        size="40"
+        class="inputbox"
+        required="true"
+        default=""
+    />
+    </fieldset>
+    <fieldset name="hidden">
+      <field name="id" type="hidden" default=""/>
+      <field name="json_optionset" type="hidden" default=""/>
+    </fieldset>   
+</form>

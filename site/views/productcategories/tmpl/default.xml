@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_POECOM_PRODUCT_CATEGORIES_VIEW_TITLE">
+		<message>COM_POECOM_PRODUCT_CATEGORIES_VIEW_TITLE_DESC</message>
+	</layout>
+	<fields
+		name="request"
+		addfieldpath="/administrator/components/com_poecom/models/fields"
+	>
+		<fieldset name="request">
+			<field
+			name="catid"
+			type="productcategorylist"
+			extension="com_poecom"
+			class="inputbox"
+			default=""
+            multiple="false"
+            published="1"
+			label="COM_POECOM_PRODUCT_FIELD_CATID_LABEL"
+			description="COM_POECOM_PRODUCT_FIELD_CATID_DESC"
+			required="true"
+		>
+			<option value="0">JOPTION_SELECT_CATEGORY</option>
+		</field>
+		</fieldset>
+	</fields>
+</metadata>
+

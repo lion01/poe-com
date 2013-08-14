@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+<layout title="COM_POECOM_PRODUCT_VIEW_DEFAULT_TITLE">
+    <message>COM_POECOM_PRODUCT_VIEW_DEFAULT_DESC</message>
+</layout>
+<fields
+    name="request"
+    addfieldpath="/administrator/components/com_poecom/models/fields"
+>
+    <fieldset name="request">
+        <field
+            name="id"
+            type="productlist"
+            label="COM_POECOM_PRODUCT_PRODUCT"
+            description="COM_POECOM_PRODUCT_PRODUCT_D"
+        />
+    </fieldset>
+</fields>
+</metadata>
+

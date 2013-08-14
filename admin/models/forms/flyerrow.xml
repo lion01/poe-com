@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+    <fieldset name="details">
+    <field
+        name="title"
+        type="text"
+        label="COM_POECOM_FLYER_ROW_TITLE"
+        size="60"
+        class="inputbox"
+        required="true"
+        default=""
+    />
+    <field
+        name="flyer_id"
+        type="flyerlist"
+        label="COM_POECOM_FLYER_TITLE"
+        description=""
+        class="inputbox rounded"
+        required="true"
+        default=""
+    />
+    <field
+        name="section_id"
+        type="flyersectionlist"
+        label="COM_POECOM_FLYER_SECTION_NAME"
+        description=""
+        size="60"
+        class="inputbox rounded"
+        required="true"
+        default=""
+    />
+    <field
+        name="block1"
+        type="flyerblockmodal"
+        label="COM_POECOM_FLYER_BLOCK1"
+        description=""
+        class="inputbox rounded"
+        required="true"
+        default=""
+    />
+    <field
+        name="block2"
+        type="flyerblockmodal"
+        label="COM_POECOM_FLYER_BLOCK2"
+        description=""
+        class="inputbox rounded"
+        default=""
+    />
+    <field
+        name="block3"
+        type="flyerblockmodal"
+        label="COM_POECOM_FLYER_BLOCK3"
+        description=""
+        class="inputbox rounded"
+        default=""
+    />
+    <field
+        name="block4"
+        type="flyerblockmodal"
+        label="COM_POECOM_FLYER_BLOCK4"
+        description=""
+        class="inputbox rounded"
+        default=""
+    />
+    <field
+        name="ordering"
+        type="sortlist"
+        sorttable="poe_flyer_row"
+        groupfield="section_id"
+        textfield="title"
+        sortfield="ordering"
+        label="COM_POECOM_SORT_ORDER"
+        description=""
+        class="inputbox"
+        default=""
+    />
+    
+    </fieldset>
+    <fieldset name="hidden">
+      <field name="id" type="hidden" default=""/>
+      <field name="published" type="hidden" default="1"/>
+    </fieldset>   
+</form>

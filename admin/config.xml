@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="poecom" label="COM_POECOM_CONFIG_SETTINGS" description="COM_POECOM_CONFIG_SETTINGS_D">
+        <field name="image_path" type="text" size="100"
+           label="COM_POECOM_COMP_IMAGE_PATH"
+           description="COM_POECOM_COMP_IMAGE_PATH_D"
+           default="/media/com_poecom/images/" />
+        <field name="productimagepath" type="text" size="100"
+           label="COM_POECOM_PRODUCT_IMAGE_PATH"
+           description="COM_POECOM_PRODUCT_IMAGE_PATH_D"
+           default="/images/products/" />
+        <field name="defaultpage" type="menuitem"
+           label="COM_POECOM_PRODUCT_DEFAULT_PAGE"
+           description="COM_POECOM_PRODUCT_DEFAULT_PAGE_D"
+           default="" />
+        <field name="cartitemid" type="menuitem"
+           label="COM_POECOM_CART_MENU"
+           description="COM_POECOM_CART_MENU_D" default="" />
+        <field name="productitemid" type="menuitem"
+           label="COM_POECOM_PRODUCT_MENU"
+           description="COM_POECOM_PRODUCT_MENU_D" default="" />
+        <field name="accountitemid" type="menuitem"
+           label="COM_POECOM_ACCOUNT_MENU"
+           description="COM_POECOM_ACCOUNT_MENU_D" default="" />
+        <field name="productrootcatid" type="category"
+           extension="com_poecom" multiple="false"
+           label="COM_POECOM_PRODUCT_ROOT_CAT"
+           description="COM_POECOM_PRODUCT_ROOT_CAT_D"
+           default="" />
+        <field addfieldpath="/administrator/components/com_poecom/models/fields"
+           name="weightuom" type="uomlist" typefilter="mass"
+           label="COM_POECOM_PRODUCT_WEIGHT_UOM"
+           description="COM_POECOM_PRODUCT_WEIGHT_UOM_D"
+           default="" />
+        <field addfieldpath="/administrator/components/com_poecom/models/fields"
+           name="lengthuom" type="uomlist" typefilter="length"
+           label="COM_POECOM_PRODUCT_DIMENSION_UOM"
+           description="COM_POECOM_PRODUCT_DIMENSION_UOM_D"
+           default="" />
+        <field name="usetploverride" type="radio" label="COM_POECOM_USE_TPL_OR"
+            description="COM_POECOM_USE_TPL_OR_D" >
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+        <field addfieldpath="/administrator/components/com_poecom/models/fields"
+           name="base_currency" type="currencylist"
+           label="COM_POECOM_BASE_CURRENCY"
+           description="COM_POECOM_BASE_CURRENCY_D" default="" />
+        <field name="allowedcountries" type="countrycodelist"
+           label="COM_POECOM_ALLOWED_COUNTRY"
+           description="COM_POECOM_ALLOWED_COUNTRY_D" default="US,CA"
+           enabled="true" multiple="true" />
+    </fieldset>
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC">
+        <field name="rules" type="rules"
+           label="JCONFIG_PERMISSIONS" class="inputbox"
+           validate="rules" filter="rules" component="com_poecom"
+           section="component" />
+    </fieldset>
+    <fieldset name="poecomshop"
+            label="COM_POECOM_SHOP_SETTINGS"
+            description="COM_POECOM_SHOP_SETTINGS_D">
+        <field name="shoplogo" label="COM_POECOM_SHOP_LOGO"
+           description="COM_POECOM_SHOP_LOGO_D" type="media"
+           directory="stories" size="70" />
+        <field name="shopurl" label="COM_POECOM_SHOP_URL"
+           description="COM_POECOM_SHOP_URL_D" type="text"
+           default="http://www.shop.com" size="70" />
+        <field name="shopname" label="COM_POECOM_SHOP_NAME"
+           description="COM_POECOM_SHOP_NAME_D" type="text"
+           size="50" />
+        <field name="shopreplyemail"
+           label="COM_POECOM_SHOP_REPLY_EMAIL"
+           description="COM_POECOM_SHOP_REPLY_EMAIL_D"
+           type="email" size="50" />
+        <field name="csremail"
+           label="COM_POECOM_SHOP_CSR_EMAIL"
+           description="COM_POECOM_SHOP_CSR_EMAIL_D" type="email"
+           size="50" />
+        <field name="rfqemail" label="COM_POECOM_SHOP_RFQ_EMAIL"
+           description="COM_POECOM_SHOP_RFQ_EMAIL_D" type="email"
+           size="50" />
+        <field name="poegroup"
+           label="COM_POECOM_SHOP_USER_GROUP"
+           description="COM_POECOM_SHOP_USER_GROUP_D"
+           type="usergroup" />
+        <field name="poeadmingroup"
+           label="COM_POECOM_SHOP_ADMIN_GROUP"
+           description="COM_POECOM_SHOP_ADMIN_GROUP_D"
+           type="usergroup" />
+        <field name="maxlogin" type="text"
+           label="COM_POECOM_SHOP_MAX_LOGIN"
+           description="COM_POECOM_SHOP_MAX_LOGIN_D" required="true"
+           default="3" />
+        <field name="billinglocation" type="locationlist"
+           label="COM_POECOM_BILL_LOCATION"
+           description="COM_POECOM_BILL_LOCATION_D" default="" />
+        <field name="shipfromlocation" type="locationlist"
+           label="COM_POECOM_SHIP_LOCATION"
+           description="COM_POECOM_SHIP_LOCATION_D" default="" />
+        <field name="usehttps" type="radio"
+           label="COM_POECOM_PRODUCT_USE_HTTPS"
+           description="COM_POECOM_PRODUCT_USE_HTTPS_D"
+           default="0">
+            <option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="returnpolicy" type="articlelist"
+           label="COM_POECOM_RETURN_POLICY"
+           description="COM_POECOM_RETURN_POLICY_D" enabled="1"
+		   multiple="multiple"
+           default="" />
+        <field name="termsofservice" type="menuitem"
+           label="COM_POECOM_TERMS"
+           description="COM_POECOM_TERMS_D" enabled="1" multiple="multiple" default="" />
+        <field name="privacypolicy" type="menuitem"
+           label="COM_POECOM_PRIVACY_POLICY"
+           description="COM_POECOM_PRIVACY_POLICY_D" enabled="1" multiple="multiple" 
+           default="" />
+        <field name="loginprompt" type="radio"
+           label="COM_POECOM_PRODUCT_LOGIN_PROMPT"
+           description="COM_POECOM_PRODUCT_LOGIN_PROMPT_D"
+           default="0">
+            <option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="randomprodcount" type="text"
+           label="COM_POECOM_RAND_PROD_COUNT"
+           description="COM_POECOM_RAND_PROD_COUNT_D"
+           default="5" />
+        <field name="autologout"
+            type="radio"
+            label="COM_POECOM_AUTO_LOGOUT"
+            description="COM_POECOM_AUTO_LOGOUT_D"
+            default="0"
+        >
+             <option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="uniqueemail"
+            type="radio"
+            label="COM_POECOM_UNIQUE_EMAIL"
+            description="COM_POECOM_UNIQUE_EMAIL_D"
+            default="0"
+        >
+             <option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="uniqueaddress"
+            type="radio"
+            label="COM_POECOM_UNIQUE_ADDRESS"
+            description="COM_POECOM_UNIQUE_ADDRESS_D"
+            default="0"
+        >
+             <option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+    </fieldset>
+    <fieldset name="poecompromotions"
+            label="COM_POECOM_PROMOTION_SETTINGS"
+            description="COM_POECOM_PROMOTION_SETTINGS_D">
+        <field name="usecoupon" type="radio"
+           label="COM_POECOM_USE_COUPON"
+           description="COM_POECOM_USE_COUPON_D" default="0">
+            <option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field name="numberpadchar" type="text"
+           label="COM_POECOM_COUPON_NUM_PAD_VALUE"
+           description="COM_POECOM_COUPON_NUM_PAD_VALUE_D" default="0"
+           required="true" />
+        <field name="numberlength" type="text"
+           label="COM_POECOM_COUPON_NUM_LENGTH"
+           description="COM_POECOM_COUPON_NUM_LENGTH_D" default="4"
+           required="true" />
+        <field name="pdftemplatefolder" type="text"
+           label="COM_POECOM_COUPON_PDF_TEMPLATE_FOLDER"
+           description="COM_POECOM_COUPON_PDF_TEMPLATE_FOLDER_D"
+           default="/images/coupon/pdf/tmpl/" size="100"
+           required="true" />
+        <field name="pdffolder" type="text"
+           label="COM_POECOM_COUPON_PDF_FOLDER"
+           description="COM_POECOM_COUPON_PDF_FOLDER_D"
+           default="/images/coupon/pdf/" size="100" required="true" />
+    </fieldset>
+    <fieldset name="crosssell" label="COM_POECOM_CROSSSELL_SETTINGS">
+        <field name="showcrosssell"
+            type="radio"
+            label="COM_POECOM_SHOW_CROSSSELL"
+            description="COM_POECOM_SHOW_CROSSSELL_D"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+    <fieldset name="creditcard" label="COM_POECOM_CREDITCARD_SETTINGS">
+        <field name="enforceccaddress"
+            type="radio"
+            label="COM_POECOM_ENFORCE_CARD_ADDRESS"
+            description="COM_POECOM_ENFORCE_CARD_ADDRESS_D"
+               default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+</config>

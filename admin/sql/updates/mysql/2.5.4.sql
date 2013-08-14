@@ -1,0 +1,1 @@
+ALTER TABLE  `#__poe_product` ADD  `tabs` VARCHAR( 50 ) NULL AFTER  `description`

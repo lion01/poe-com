@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+    <fieldset name="orderheader" label="COM_POECOM_ORDER_HEADER">
+        <field
+            name="status_id"
+            type="orderstatuslist"
+            label="COM_POECOM_ORDER_STATUS"
+            description="COM_POECOM_ORDER_STATUS_D"
+            class="inputbox"
+            required="true"
+            default="1"
+        />
+       <field
+            name="rfq_id"
+            type="rfqmodal"
+            label="COM_POECOM_ORDER_RFQ_NUMBER"
+            description="COM_POECOM_ORDER_RFQ_NUMBER_D"
+            size="40"
+            class="inputbox"
+            required="false"
+            default="0"
+        />
+        <field 
+            name="payment_id" 
+            type="paytransactionmodal" 
+            label="COM_POECOM_ORDER_PAYMENT_ID" 
+            description="COM_POECOM_ORDER_PAYMENT_ID_D"
+            size="40"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+        <field
+            name="order_date"
+            type="text"
+            label="COM_POECOM_ORDER_ORDER_DATE"
+            description="COM_POECOM_ORDER_ORDER_DATE_D"
+            size="20"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+        <field
+            name="juser_id"
+            type="user"
+            label="COM_POECOM_ORDER_CUSTOMER"
+            description="COM_POECOM_ORDER_CUSTOMER_D"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+        <field
+            name="ip_address"
+            type="text"
+            label="COM_POECOM_ORDER_IP"
+            description="COM_POECOM_ORDER_IP_D"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+       <field
+            name="billing_id"
+            type="hidden"
+        />
+        <field
+            name="shipping_id"
+            type="hidden"
+        />
+        <field
+            name="selected_shipping"
+            type="hidden"
+        />
+        
+    </fieldset>
+    <fieldset name="ordervalue" label="COM_POECOM_ORDER_VALUE">
+        <field
+            name="total"
+            type="text"
+            label="COM_POECOM_ORDER_TOTAL"
+            description="COM_POECOM_ORDER_TOTAL_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            readonly="true"
+        />
+        <field
+            name="subtotal"
+            type="text"
+            label="COM_POECOM_ORDER_SUBTOTAL"
+            description="COM_POECOM_ORDER_SUBTOTAL_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            readonly="true"
+        />
+	<field
+            name="discounttotal"
+            type="text"
+            label="COM_POECOM_ORDER_DISCOUNT"
+            description="COM_POECOM_ORDER_DISCOUNT_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            readonly="true"
+	    default="0"
+        />
+        <field
+            name="product_tax"
+            type="text"
+            label="COM_POECOM_ORDER_PRODUCT_TAX"
+            description="COM_POECOM_ORDER_PRODUCT_TAX_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            readonly="true"
+        />
+        <field
+            name="shipping_cost"
+            type="text"
+            label="COM_POECOM_ORDER_SHIPPING"
+            description="COM_POECOM_ORDER_SHIPPING_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            default="0"
+           
+        />
+        <field
+            name="shipping_tax"
+            type="text"
+            label="COM_POECOM_ORDER_SHIPPING_TAX"
+            description="COM_POECOM_ORDER_SHIPPING_TAX_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            default="0"
+        />
+    </fieldset>
+    <fieldset name="orderpromotion" label="COM_POECOM_PROMOTION">
+	<field
+            name="promotionname"
+            type="text"
+            label="COM_POECOM_ORDER_PROMOTION_NAME"
+            description="COM_POECOM_ORDER_PROMOTION_NAME_D"
+            size="50"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+	<field
+            name="couponcode"
+            type="text"
+            label="COM_POECOM_ORDER_COUPON_CODE"
+            description="COM_POECOM_ORDER_COUPON_CODE_D"
+            size="50"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+    </fieldset>
+    <fieldset name="btaddress" label="COM_POECOM_USER_BT"
+            addfieldpath="/administrator/components/com_poecom/models/fields"
+    >
+    <field name="fname"
+        type="text"
+        label="COM_POECOM_USER_FNAME"
+        size="25"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="lname"
+        type="text"
+        label="COM_POECOM_USER_LNAME"
+        size="25"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="street1"
+        type="text"
+        label="COM_POECOM_USER_STREET1"
+        size="25"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="street2"
+        type="text"
+        label="COM_POECOM_USER_STREET2"
+        size="25"
+        required="false"
+        class="poe-btaddress"
+    />
+    <field name="city"
+        type="text"
+        label="COM_POECOM_USER_CITY"
+        size="25"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="country_id"
+        type="countrylist"
+        enabled="1"
+        default="38"
+        label="COM_POECOM_USER_COUNTRY"
+        onchange="updateRegions('BT')"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="region_id"
+        type="regionlist"
+        countryid="38"
+        label="COM_POECOM_USER_REGION"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="postal_code"
+        type="text"
+        label="COM_POECOM_USER_POSTAL"
+        size="10"
+        required="true"
+        class="poe-btaddress"
+    />
+    <field name="telephone"
+        type="tel"
+        label="COM_POECOM_USER_TELEPHONE"
+        size="20"
+        required="true"
+        class="poe-btaddress"
+    />
+    </fieldset>
+    <fieldset name="shiptobill" label="COM_POECOM_USER_ST"
+		addfieldpath="/administrator/components/com_poecom/models/fields"
+	>
+        <field name="stbt_same"
+            type="radio"
+            label="COM_POECOM_USER_STBT_SAME"
+            required="true"
+            default="1"
+            >
+            <option value="0" onclick="toggleSTFields()">JNO</option>
+            <option value="1" onclick="toggleSTFields()">JYES</option>
+        </field>
+        <fieldset name="staddress" label="COM_POECOM_USER_ST"
+                addfieldpath="/administrator/components/com_poecom/models/fields"
+        >
+
+        <field name="st_fname"
+            type="text"
+            label="COM_POECOM_USER_FNAME"
+            size="25"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_lname"
+            type="text"
+            label="COM_POECOM_USER_LNAME"
+            size="25"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_street1"
+            type="text"
+            label="COM_POECOM_USER_STREET1"
+            size="25"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_street2"
+            type="text"
+            label="COM_POECOM_USER_STREET2"
+            size="25"
+            required="false"
+            class="poe-staddress"
+        />
+        <field name="st_city"
+            type="text"
+            label="COM_POECOM_USER_CITY"
+            size="25"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_country_id"
+            type="countrylist"
+            enabled="1"
+            default="38"
+            label="COM_POECOM_USER_COUNTRY"
+            onchange="updateRegions('ST')"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_region_id"
+            type="regionlist"
+            countryid="38"
+            label="COM_POECOM_USER_REGION"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_postal_code"
+            type="text"
+            label="COM_POECOM_USER_POSTAL"
+            size="10"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        <field name="st_telephone"
+            type="tel"
+            label="COM_POECOM_USER_TELEPHONE"
+            size="20"
+            required="false"
+            class="poe-staddress-toggle"
+        />
+        </fieldset>
+    </fieldset>
+    <fieldset name="ordercarrier" label="COM_POECOM_ORDER_CARRIER">
+        <field
+            name="carrier"
+            type="text"
+            label="COM_POECOM_ORDER_CARRIER"
+            description="COM_POECOM_ORDER_CARRIER_D"
+            size="40"
+            class="inputbox poe-carrier"
+            required="false"
+            readonly="true"
+        />
+        <field
+            name="carrier_logo"
+            type="hidden"
+            label=""
+            description=""
+            class="inputbox poe-carrier"
+            required="false"
+            readonly="true"
+        />
+        <field
+            name="eta"
+            type="calendar"
+            label="COM_POECOM_ORDER_SHIPPING_ETA"
+            description="COM_POECOM_ORDER_SHIPPING_ETA_D"
+            size="10"
+            class="inputbox poe-carrier"
+            onchange="updateCarrier()"
+            required="false"
+            readonly="false"
+        />
+        <field
+            name="service"
+            type="text"
+            label="COM_POECOM_ORDER_SHIPPING_SERVICE"
+            description="COM_POECOM_ORDER_SHIPPING_SERVICE_D"
+            size="40"
+            class="inputbox poe-carrier"
+            onchange="updateCarrier()"
+            required="false"
+            default="0"
+           
+        />
+    </fieldset>
+    <fieldset name="hidden">
+        <field name="id" type="hidden" />
+    </fieldset>
+</form>

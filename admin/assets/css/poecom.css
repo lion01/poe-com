@@ -1,0 +1,228 @@
+/* -- CONTROL PANEL STYLES ----------------------------- */
+.poecom-cpanel{
+    clear: both;
+}
+.poecom-cpanel div.poecom-icon{
+	text-align: center;
+	margin-right: 15px;
+	float: left;
+	margin-bottom: 15px;
+}
+.poecom-cpanel div.poecom-icon a{
+	background-color: #fff;
+	background-position: -30px;
+	display: block;
+	float: left;
+	height: 97px;
+	width: 108px;
+	color: #565656;
+	vertical-align: middle;
+	text-decoration: none;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition-property:
+		background-position,
+		-webkit-border-bottom-left-radius,
+		-webkit-box-shadow;
+	-moz-transition-property:
+		background-position,
+		-moz-border-radius-bottomleft,
+		-moz-box-shadow;
+	-webkit-transition-duration: 0.8s;
+	-moz-transition-duration: 0.8s;
+}
+
+.poecom-cpanel div.poecom-icon a:hover,
+.poecom-cpanel div.poecom-icon a:focus,
+.poecom-cpanel div.poecom-icon a:active {
+	background-position: 0;
+	-webkit-border-bottom-left-radius: 50% 20px;
+	-moz-border-radius-bottomleft: 50% 20px;
+	border-bottom-left-radius: 50% 20px;
+	-webkit-box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+	box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+	position: relative;
+	z-index: 10;
+}
+.poecom-cpanel img {
+    float: none;
+	padding: 10px 0;
+	margin: 0 auto;
+}
+.poecom-cpanel span {
+	display: block;
+	text-align: center;
+}
+div.poecom-cpanel-left {
+	width: 64%;
+	float: left;
+}
+div.poecom-cpanel-right {
+	width: 45%;
+	float: right;
+}
+.poecom-icon {
+    text-align: center;
+    margin-right: 15px;
+    float: left;
+    margin-bottom: 15px;
+}
+.poecom-icon-wrapper div.poecom-icon a {
+background-color: #E0E0D8;
+background-position: -30px;
+display: block;
+float: left;
+height: 97px;
+width: 108px;
+color: #565656;
+vertical-align: middle;
+text-decoration: none;
+border: 1px solid #CCC;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-transition-property: background-position, -webkit-border-bottom-left-radius, -webkit-box-shadow;
+-moz-transition-property: background-position, -moz-border-radius-bottomleft, -moz-box-shadow;
+-webkit-transition-duration: 0.8s;
+-moz-transition-duration: 0.8s;
+}
+.poecom-icon-wrapper img{
+padding: 10px 0;
+margin: 0 auto;
+}
+#poeadmin{
+    position: relative;
+    width: 100%;
+}
+.poe-admin{
+    clear: both;
+    float: left;
+    width: 60%;
+}
+.poe-admin-icon{
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+#dev-foot{
+    clear: both;
+    width: 100%;
+    padding-top: 0.5em;
+}
+#dev-foot div{
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75em;
+}
+/* toolbar additions */
+.icon-32-generate-order{
+    background-image: url('../../../../../media/com_poecom/images/icon-32-generate-order.png');
+}
+.icon-32-generate-coupon{
+    background-image: url('../../../../../media/com_poecom/images/icon-32-generate-coupon.png');
+}
+.icon-32-generate-pdf{
+    background-image: url('../../../../../media/com_poecom/images/icon-32-generate-pdf.png');
+}
+#promo-numbers, #promo-direct{
+    float: left;
+    width: 95%;
+    margin: 1.0em;
+}
+#promo-numbers div, #promo-direct div{
+    float: left;
+    width: 50%;
+}
+#promo-fields{
+    clear: both;
+    float: left;
+}
+#promo-instruction{
+    font-size: 1.25em;
+    margin: 0 0.5em 0 0.5em;
+}
+.currency{
+    text-align: right;
+}
+/*product admin */
+
+#fs-product,
+#fs-seo,
+#fs-shipping{
+    float: left;
+    width: 500px;
+}
+#fs-images{
+    float: left;
+    width: 600px;
+}
+#fs-options{
+    float: left;
+    width: 600px;
+}
+#fs-options label{
+    width: 250px;
+}
+
+#fs-product label,
+#fs-product-desc label,
+#fs-seo label,
+#fs-images label,
+#fs-shipping label{
+    width: 150px;
+}
+#jform_published,
+#jform_order_allowed,
+#jform_appendoptions,
+#jform_show_related{
+    float: left;
+}
+fieldset .radio{
+    border: none;
+}
+fieldset .radio label{
+    clear: none;
+    margin-right: 10px;
+    width: auto !important;
+}
+.poe-update-button{
+    clear: both;
+}
+#jform_tablabel-lbl,#jform_tablabel{
+    margin-top: 40px;
+}
+#jform_catid{
+    width: 200px;
+}
+#gen-product-options{
+    clear: both;
+    float: left;
+}
+#option_list{
+    clear: both;
+}
+#optionset_option_list-head{
+    list-style: none;
+}
+#optionset_option_list-head li{
+    display: inline;
+}
+#optionset_option_list{
+    list-style: none;
+}
+#optionset_option_list li{
+    clear: both;
+    float: left;
+}
+#optionset_option_list_buttons{
+    clear: both;
+    float: left;
+}
+.ajax-button{
+    clear: both;
+    float: left;
+}

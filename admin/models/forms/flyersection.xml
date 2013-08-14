@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+    <fieldset name="details">
+    <field
+        name="name"
+        type="text"
+        label="COM_POECOM_FLYER_SECTION_NAME"
+        description=""
+        size="60"
+        class="inputbox rounded"
+        required="true"
+        default=""
+    />
+    <field
+        name="flyer_id"
+        type="flyerlist"
+        label="COM_POECOM_FLYER_SECTION_FLYER"
+        description=""
+        class="inputbox rounded"
+        required="true"
+        default=""
+    />
+    <field
+        name="banner"
+        type="editor"
+        label="COM_POECOM_FLYER_SECTION_BANNER"
+        description="COM_POECOM_FLYER_SECTION_BANNER_D"
+        buttons="article,image,pagebreak,readmore"
+        filter="raw"
+        class="inputbox"
+        default=""
+    />
+    <field
+        name="ordering"
+        type="sortlist"
+        sorttable="poe_flyer_section"
+        groupfield="flyer_id"
+        textfield="name"
+        sortfield="ordering"
+        label="COM_POECOM_SORT_ORDER"
+        description=""
+        class="inputbox"
+        default=""
+    />
+    </fieldset>
+    <fieldset name="hidden">
+      <field name="id" type="hidden" default=""/>
+      <field name="published" type="hidden" default="1"/>
+    </fieldset>   
+</form>

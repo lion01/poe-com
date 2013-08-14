@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+
+  <fieldset name="rfqrecord" label="COM_POECOM_RFQ_RECORD">
+        <field
+            name="number"
+            type="text"
+            label="COM_POECOM_RFQ_NUMBER"
+            description="COM_POECOM_RFQ_NUMBER_D"
+            size="40"
+            class="inputbox"
+            required="true"
+            readonly="true"
+        />
+        <field
+            name="request_date"
+            type="text"
+            label="COM_POECOM_RFQ_DATE"
+            description="COM_POECOM_RFQ_DATE_D"
+            size="40"
+            class="inputbox"
+            required="true"
+            readonly="true"
+        />
+        <field 
+            name="status_id" 
+            type="sql" 
+            default=""
+            label="COM_POECOM_RFQ_STATUS" 
+            description="COM_POECOM_RFQ_STATUS_D"
+            query="SELECT id, name FROM `#__poe_request_status` ORDER BY sort_order" 
+            key_field="id" 
+            value_field="name"
+        />
+        <field
+            name="order_id"
+            type="text"
+            label="COM_POECOM_RFQ_ORDERID"
+            description="COM_POECOM_RFQ_ORDERID_D"
+            class="inputbox"
+            required="true"
+            readonly="true"
+        />
+        <field
+            name="juser_id"
+            type="user"
+            label="COM_POECOM_RFQ_JUSERID"
+            description="COM_POECOM_RFQ_JUSERID_D"
+            default="0"
+            required="true"
+        />
+        <field
+            name="cart"
+            type="hidden"
+            label=""
+            class="inputbox"
+            required="true"
+            default=""
+        />
+    </fieldset>
+    <fieldset name="rfqvalue" label="COM_POECOM_RFQ_VALUE">
+        <field
+            name="total"
+            type="text"
+            label="COM_POECOM_RFQ_TOTAL"
+            description="COM_POECOM_RFQ_TOTAL_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            readonly="true"
+        />
+        <field
+            name="subtotal"
+            type="text"
+            label="COM_POECOM_RFQ_SUBTOTAL"
+            description="COM_POECOM_RFQ_SUBTOTAL_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            readonly="true"
+        />
+	<field
+            name="discounttotal"
+            type="text"
+            label="COM_POECOM_RFQ_DISCOUNT"
+            description="COM_POECOM_RFQ_DISCOUNT_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            readonly="true"
+	    default="0"
+        />
+        <field
+            name="product_tax"
+            type="text"
+            label="COM_POECOM_RFQ_PRODUCT_TAX"
+            description="COM_POECOM_RFQ_PRODUCT_TAX_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            readonly="true"
+        />
+        <field
+            name="shipping_cost"
+            type="text"
+            label="COM_POECOM_RFQ_SHIPPING"
+            description="COM_POECOM_RFQ_SHIPPING_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            default="0"
+           
+        />
+        <field
+            name="shipping_tax"
+            type="text"
+            label="COM_POECOM_RFQ_SHIPPING_TAX"
+            description="COM_POECOM_RFQ_SHIPPING_TAX_D"
+            size="10"
+            class="inputbox currency"
+            required="true"
+            default="0"
+        />
+    </fieldset>
+    <fieldset name="rfqpromotion" label="COM_POECOM_PROMOTION">
+	<field
+            name="promotionname"
+            type="text"
+            label="COM_POECOM_RFQ_PROMOTION_NAME"
+            description="COM_POECOM_RFQ_PROMOTION_NAME_D"
+            size="50"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+	<field
+            name="couponcode"
+            type="text"
+            label="COM_POECOM_RFQ_COUPON_CODE"
+            description="COM_POECOM_RFQ_COUPON_CODE_D"
+            size="50"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+    </fieldset>
+  
+    <fieldset name="rfqstaddess" label="COM_POECOM_USER_ST"
+            addfieldpath="/administrator/components/com_poecom/models/fields">
+        <field name="stbt_same"
+            type="radio"
+            label="COM_POECOM_USER_STBT_SAME"
+            required="true"
+            default="1"
+        >
+            <option value="0" onclick="toggleSTFields()">JNO</option>
+            <option value="1" onclick="toggleSTFields()">JYES</option>
+        </field>
+    </fieldset>
+       <fieldset name="rfqcarrier" label="COM_POECOM_RFQ_CARRIER">
+        <field
+            name="carrier"
+            type="text"
+            label="COM_POECOM_RFQ_CARRIER"
+            description="COM_POECOM_RFQ_CARRIER_D"
+            size="40"
+            class="inputbox"
+            required="false"
+            readonly="true"
+        />
+        <field
+            name="carrier_logo"
+            type="hidden"
+            label=""
+            description=""
+            class="inputbox"
+            required="false"
+            readonly="true"
+        />
+        <field
+            name="eta"
+            type="calendar"
+            label="COM_POECOM_RFQ_SHIPPING_ETA"
+            description="COM_POECOM_RFQ_SHIPPING_ETA_D"
+            size="10"
+            class="inputbox"
+            required="false"
+            readonly="false"
+        />
+        <field
+            name="service"
+            type="text"
+            label="COM_POECOM_RFQ_SHIPPING_SERVICE"
+            description="COM_POECOM_RFQ_SHIPPING_SERVICE_D"
+            size="40"
+            class="inputbox"
+            required="false"
+            default="0"
+           
+        />
+    </fieldset>
+       <fieldset name="hidden">
+           <field name="id" type="hidden" />
+           <field name="billing_id" type="hidden" />
+           <field name="shipping_id" type="hidden" default="0" />
+       </fieldset>
+</form>

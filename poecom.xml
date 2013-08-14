@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="install">
+  <name>COM_POECOM</name>
+  <creationDate>July 2013</creationDate>
+  <author>Extensible Point Solutions Inc.</author>
+  <authorEmail>micah@exps.ca</authorEmail>
+  <authorUrl>http://www.exps.ca</authorUrl>
+  <copyright>Copyright 2011 - 2013 Extensible Point Solutions Inc. - All Right Reserved</copyright>
+  <license>GNU GPL version 3, http://www.gnu.org/copyleft/gpl.html</license>
+  <version>2.5.15</version>
+  <description>COM_POECOM_DESCRIPTION</description>
+  <scriptfile>script.php</scriptfile>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+  <update>
+    <schemas>
+      <schemapath type="mysql">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
+  <files folder="site">
+    <filename>controller.php</filename>
+    <filename>poecom.php</filename>
+    <filename>index.html</filename>
+    <filename>router.php</filename>
+    <folder>controllers</folder>
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>language</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+  </files>
+  <media destination="com_poecom" folder="media">
+    <filename>index.html</filename>
+    <folder>images</folder>
+  </media>
+  <administration>
+    <menu img="../media/com_poecom/images/icon-16-poecom.png">COM_POECOM_MENU</menu>
+    <submenu>
+      <menu img="../media/com_poecom/images/icon-16-requests.png" controller="requests" view="requests" layout="list">COM_POECOM_SUBMENU_REQUESTS</menu>
+      <menu img="../media/com_poecom/images/icon-16-orders.png" controller="orders" view="orders" layout="list">COM_POECOM_SUBMENU_ORDERS</menu>
+      <menu img="../media/com_poecom/images/icon-16-promotions.png" controller="promotions" view="promotions" layout="list">COM_POECOM_SUBMENU_PROMOTIONS</menu>
+      <menu img="../media/com_poecom/images/icon-16-coupons.png" controller="coupons" view="coupons" layout="list">COM_POECOM_SUBMENU_COUPONS</menu>
+      <menu img="../media/com_poecom/images/icon-16-locations.png" controller="locations" view="locations" layout="list">COM_POECOM_SUBMENU_LOCATIONS</menu>
+      <menu img="../media/com_poecom/images/icon-16-products.png" controller="products" view="products" layout="list">COM_POECOM_SUBMENU_PRODUCTS</menu>
+      <menu img="../media/com_poecom/images/icon-16-images.png" controller="images" view="images" layout="list">COM_POECOM_SUBMENU_IMAGES</menu>
+      <menu img="../media/com_poecom/images/icon-16-shipmethods.png" controller="shipmethods" view="shipmethods" layout="list">COM_POECOM_SUBMENU_SHIPMETHODS</menu>
+      <menu img="../media/com_poecom/images/icon-16-paymethods.png" controller="paymethods" view="paymethods" layout="list">COM_POECOM_SUBMENU_PAYMETHODS</menu>
+      <menu img="../media/com_poecom/images/icon-16-payments.png" controller="paytransactions" view="paytransactions" layout="list">COM_POECOM_SUBMENU_PAY_TRANSACTIONS</menu>
+    </submenu>
+    <files folder="admin">
+      <filename>index.html</filename>
+      <filename>config.xml</filename>
+      <filename>access.xml</filename>
+      <filename>poecom.php</filename>
+      <filename>controller.php</filename>
+      <folder>assets</folder>
+      <folder>controllers</folder>
+      <folder>helpers</folder>
+      <folder>language</folder>
+      <folder>models</folder>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>tcpdf</folder>
+      <folder>views</folder>
+    </files>
+  </administration>
+</extension>

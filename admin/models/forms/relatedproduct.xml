@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+    <fieldset name="details" label="COM_POECOM_RP_DETAILS">
+    <field
+        name="id"
+        type="hidden"
+    />
+    <field
+        name="group_id"
+        type="relatedproductgrouplist"
+        label="COM_POECOM_RG"
+        description="COM_POECOM_RG_D"
+        class="inputbox"
+        required="true"
+        default="0"
+    />
+     <field
+        name="product_id"
+        type="productlist"
+        label="COM_POECOM_PRODUCT"
+        description="COM_POECOM_RP_PRODUCT_D"
+        class="inputbox"
+        required="true"
+        default=""
+    />
+    <field
+        name="published"
+        type="radio" 
+        label ="COM_POECOM_ENABLED"
+        description="" 
+        class="inputbox"
+        required="true"
+        default="1"
+    >
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+    </field>
+    
+    </fieldset>
+</form>

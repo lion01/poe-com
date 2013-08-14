@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="profile" label="COM_POECOM_FS_ACCT_PROFILE" 
+              addfieldpath="/administrator/components/com_poecom/models/fields"
+    >
+        <field name="name"
+               type="text"
+               label="COM_POECOM_F_ACCT_NAME"
+               size="25"
+               required="true"
+              
+        />
+        <field name="username"
+               type="text"
+               label="COM_POECOM_F_ACCT_USERNAME"
+               description="COM_POECOM_F_ACCT_USERNAME_D"
+               default=""
+               readonly="true"
+        />
+        <field name="password1"
+               type="password"
+               label="COM_POECOM_F_ACCT_PASSWORD"
+        />
+        <field name="password2"
+               type="password"
+               label="COM_POECOM_F_ACCT_PASSWORD2"
+        />
+        <field name="email"
+               type="email"
+               label="COM_POECOM_F_ACCT_EMAIL"
+               description="COM_POECOM_F_ACCT_EMAIL_D"
+        />
+            
+    </fieldset>
+    <fieldset name="billtofields" label="COM_POECOM_USER_BT_LBL"
+             addfieldpath="/administrator/components/com_poecom/models/fields"
+    >
+        <field name="fname"
+               type="text"
+               label="COM_POECOM_USER_FNAME_LABEL"
+               size="25"
+               required="true"
+               class="poe-address"
+        />
+        <field name="lname"
+               type="text"
+               label="COM_POECOM_USER_LNAME_LABEL"
+               size="25"
+               required="true"
+               class="poe-address"
+        />
+        <field name="street1"
+               type="text"
+               label="COM_POECOM_USER_STREET1_LABEL"
+               size="25"
+               required="true"
+               class="poe-address"
+        />
+        <field name="street2"
+               type="text"
+               label="COM_POECOM_USER_STREET2_LABEL"
+               size="25"
+               required="false"
+               class="poe-address"
+        />
+        <field name="city"
+               type="text"
+               label="COM_POECOM_USER_CITY_LABEL"
+               size="25"
+               required="true"
+               class="poe-address"
+        />
+        <field name="country_id"
+               type="countrylist"
+               enabled="1"
+               default="222"
+               label="COM_POECOM_USER_COUNTRY_LABEL"
+               onchange="updateRegions()"
+               required="true"
+               class="poe-address"
+        />
+        <field name="region_id"
+               type="regionlist"
+               countryid="222"
+               label="COM_POECOM_USER_REGION_LABEL"
+               required="true"
+               class="poe-address"
+        />
+        <field name="postal_code"
+               type="text"
+               label="COM_POECOM_USER_POSTAL_LABEL"
+               size="10"
+               required="true"
+               class="poe-address"
+        />
+        <field name="telephone"
+               type="tel"
+               label="COM_POECOM_USER_TELEPHONE_LABEL"
+               size="20"
+               required="true"
+               class="poe-address"
+        />
+        <field name="btid"
+               type="hidden"
+               required="false"
+               class="poe-address"
+        />
+    </fieldset>
+    <fieldset name="shiptofields" label=""
+              addfieldpath="/administrator/components/com_poecom/models/fields"
+    >
+        <field name="stbt_same"
+               type="radio"
+               label="COM_POECOM_USER_STBT_SAME_LABEL"
+               required="true"
+               default="1"
+        >
+            <option value="0" onclick="toggleSTFields()">JNO</option>
+            <option value="1" onclick="toggleSTFields()">JYES</option>
+        </field>
+        <field name="stfname"
+               type="text"
+               label="COM_POECOM_USER_FNAME_LABEL"
+               size="25"
+               required="true"
+               class="poe-staddress"
+        />
+        <field name="stlname"
+               type="text"
+               label="COM_POECOM_USER_LNAME_LABEL"
+               size="25"
+               required="true"
+               class="poe-staddress"
+        />
+        <field name="ststreet1"
+               type="text"
+               label="COM_POECOM_USER_STREET1_LABEL"
+               size="25"
+               required="true"
+               class="poe-staddress"
+        />
+        <field name="ststreet2"
+               type="text"
+               label="COM_POECOM_USER_STREET2_LABEL"
+               size="25"
+               required="false"
+               class="poe-staddress"
+        />
+        <field name="stcity"
+               type="text"
+               label="COM_POECOM_USER_CITY_LABEL"
+               size="25"
+               required="true"
+               class="poe-staddress"
+        />
+        <field name="stcountry_id"
+               type="countrylist"
+               enabled="1"
+               default="38"
+               label="COM_POECOM_USER_COUNTRY_LABEL"
+               onchange="updateSTRegions()"
+               required="true"
+               class="poe-staddress"
+        />
+        <field name="stregion_id"
+               type="regionlist"
+               countryid="38"
+               label="COM_POECOM_USER_REGION_LABEL"
+               required="true"
+               class="poe-staddress"
+        />
+        <field name="stpostal_code"
+               type="text"
+               label="COM_POECOM_USER_POSTAL_LABEL"
+               size="10"
+               required="true"
+               class="poe-staddress"
+        />
+        <field name="sttelephone"
+               type="tel"
+               label="COM_POECOM_USER_TELEPHONE_LABEL"
+               size="20"
+               required="true"
+               class="poe-staddress"
+        />
+        <field name="stid"
+               type="hidden"
+               required="false"
+               class="poe-staddress"
+        />
+    </fieldset>
+</form>

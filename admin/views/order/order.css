@@ -1,0 +1,97 @@
+#cart-list{
+    clear: both;
+    float:  left;
+}
+
+#order-list-hd{
+    background-color: #cbd9d9;
+    font-weight: bold;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+#order-prod-hd{
+    width: 410px;
+    text-align: center;
+}
+
+#order-price-hd{
+    width: 80px;
+    text-align: center;
+}
+
+#order-qty-hd{
+    width: 70px;
+    text-align: center;
+}
+
+#order-line-total-hd{
+    max-width: 80px;
+    text-align: center;
+}
+
+#order-list-hd ul{
+    list-style: none;
+}
+
+#order-list-hd li{
+    display: inline-block;
+}
+
+#order-container-items{
+    float: left;
+    border: 1px solid gray;
+}
+
+.order-item{
+    clear: both;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.order-item-id{
+    float: left;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 400px;
+    height: 100%;
+    min-height: 2.5em;
+    border-right: 1px solid gray;
+}
+
+.order-item-price{
+    float: left;
+    text-align: center;
+    width: 80px;
+    height: 100%;
+    min-height: 2.5em;
+    border-right: 1px solid gray;
+}
+
+.order-item-qty{
+    float: left;
+    text-align: center;
+    width: 80px;
+    height: 100%;
+    min-height: 2.5em;
+    border-right: 1px solid gray;
+}
+
+.order-item-qty div{
+    float: left;
+    width: 50%;
+}
+
+.order-item-total{
+    float: left;
+    text-align: right;
+    width: 80px;
+    height: 100%;
+    min-height: 2.5em;
+    padding-right: 0.25em;
+}
+

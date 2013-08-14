@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+    <fieldset name="product" label="COM_POECOM_PRODUCT">
+        <field
+            name="name"
+            type="text"
+            label="COM_POECOM_PRODUCT_NAME"
+            description="COM_POECOM_PRODUCT_NAME_D"
+            size="40"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+        <field
+            name="sku"
+            type="text"
+            label="COM_POECOM_PRODUCT_SKU"
+            description="COM_POECOM_PRODUCT_SKU_D"
+            size="40"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+        <field
+            name="type"
+            type="producttypelist"
+            extension="com_poecom"
+            label="COM_POECOM_PRODUCT_TYPE"
+            description="COM_POECOM_PRODUCT_TYPE_D"
+            class="inputbox"
+            required="true"
+        />
+        <field
+            name="price"
+            type="text"
+            label="COM_POECOM_PRODUCT_PRICE"
+            description="COM_POECOM_PRODUCT_PRICE_D"
+            size="10"
+            class="inputbox"
+            required="true"
+            default="0"
+        />
+        <field
+            name="tax_exempt_ids"
+            type="taxtypelist"
+            label="COM_POECOM_PRODUCT_TAX_EXEMPT"
+            description="COM_POECOM_PRODUCT_TAX_EXEMPT_D"
+            class="inputbox"
+            multiple="true"
+            required="false"
+            default=""
+        />
+        <field name="published"
+           type="radio"
+           label="COM_POECOM_PRODUCT_STATE"
+           description="COM_POECOM_PRODUCT_STATE_D"
+           default="1" >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+            name="order_allowed"
+            type="radio"
+            label="COM_POECOM_PRODUCT_ORDER_BLOCK"
+            description="COM_POECOM_PRODUCT_ORDER_BLOCK"
+            default="1" >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+            name="default_qty"
+            type="text"
+            label="COM_POECOM_PRODUCT_DEFAULT_QTY"
+            description="COM_POECOM_PRODUCT_DEFAULT_QTY_D"
+            size="5"
+            class="inputbox validate-default-qty"
+            validate="product"
+            required="true"
+            default="1"
+        />
+        <field
+            name="max_qty"
+            type="text"
+            label="COM_POECOM_PRODUCT_MAX_QTY"
+            description="COM_POECOM_PRODUCT_MAX_QTY_D"
+            size="5"
+            class="inputbox"
+            required="true"
+            default="0"
+        />
+        <field
+            name="show_related"
+            type="radio"
+            label="COM_POECOM_SHOW_RELATED"
+            description="COM_POECOM_SHOW_RELATED_D"
+            default="1"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field
+            name="related_group_id"
+            type="relatedproductlistmodal"
+            label="COM_POECOM_PRODUCT_RELATED_GROUP"
+            description="COM_POECOM_PRODUCT_RELATED_GROUP_D"
+        />
+        <field
+            name="catid"
+            type="productcategorylist"
+            extension="com_poecom"
+            class="inputbox"
+            default=""
+            multiple="true"
+            published="1"
+            label="COM_POECOM_PRODUCT_CATID"
+            description="COM_POECOM_PRODUCT_CATID_D"
+            required="true"
+            size="18"
+        >
+            <option value="0">JOPTION_SELECT_CATEGORY</option>
+        </field>
+    </fieldset>
+    <fieldset name="productdesc" label="COM_POECOM_PRODUCT_DESC">
+             <field
+            name="list_description"
+            type="editor"
+            label="COM_POECOM_PRODUCT_LIST_DESC"
+            description="COM_POECOM_PRODUCT_LIST_DESC_D"
+            class="inputbox"
+            filter="safehtml" 
+            required="true"
+        />
+        <field
+            name="tablabel"
+            type="text"
+            label="COM_POECOM_PRODUCT_TAB_LABEL"
+            description="COM_POECOM_PRODUCT_TAB_LABEL_D"
+            class="inputbox"
+            default=""
+            size="40"
+        />
+        <field
+            name="description"
+            type="editor" 
+            label ="COM_POECOM_PRODUCT_DESC" 
+            description ="COM_POECOM_PRODUCT_DESC_D"
+            class="inputbox"
+            filter="safehtml" 
+            required="true"
+        />
+        </fieldset>
+    <fieldset name="seo" label="COM_POECOM_PRODUCT_SEO">
+         <field 
+            name="menu_id"
+            type="menuitem"
+            label="COM_POECOM_PRODUCT_MENU_ID"
+            description="COM_POECOM_PRODUCT_MENU_ID_D"
+         >
+             <option value="0">COM_POECOM_PRODUCT_MENU_NONE</option>
+         </field>
+        <field
+            name="alias"
+            type="text"
+            label="COM_POECOM_PRODUCT_ALIAS"
+            description="COM_POECOM_PRODUCT_ALIAS_D"
+            size="30"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+        <field 
+            name="page_title"
+            type="text"
+            label="COM_POECOM_PAGE_TITLE"
+            description="COM_POECOM_PAGE_TITLE_D"
+            default=""
+            size="80"
+        />
+        <field name="metakey" 
+               type="textarea" 
+               label="JFIELD_META_KEYWORDS_LABEL"
+               description="JFIELD_META_KEYWORDS_DESC" 
+               class="inputbox" rows="3" cols="60"
+        />
+        <field name="metadesc" 
+               type="textarea" 
+               label="JFIELD_META_DESCRIPTION_LABEL" 
+               description="JFIELD_META_DESCRIPTION_DESC" 
+               class="inputbox" rows="3" cols="60"
+        />
+        <fields name="metadata">
+            <field name="robots"
+                       type="list"
+                       label="JFIELD_METADATA_ROBOTS_LABEL"
+                       description="COM_POECOM_METADATA_ROBOTS_D"
+            >
+                <option value="">COM_POECOM_NO_ROBOT_META</option>
+                <option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+                <option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+                <option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+            </field>
+        </fields>
+    </fieldset>
+    <fieldset name="images" label="COM_POECOM_PRODUCT_IMAGES">
+        <field
+            name="main_image_width"
+            type="text" 
+            label ="COM_POECOM_PRODUCT_MAIN_IMAGE_WIDTH" 
+            description="COM_POECOM_PRODUCT_MAIN_IMAGE_WIDTH_D"
+            class="inputbox"
+            size="5"
+            default=""
+        />
+        <field 
+            name="show_zoom"
+            type="list"
+            label="COM_POECOM_PRODUCT_SHOW_ZOOM"
+            description="COM_POECOM_PRODUCT_SHOW_ZOOM_D"
+            default="0">
+            <option value="0">JNo</option>
+            <option value="1">JYes</option>
+        </field>
+        <field
+            name="mainimage"
+            type="media" 
+            directory="poecom/products"
+            label ="COM_POECOM_PRODUCT_MAIN_IMAGE" 
+            description="COM_POECOM_PRODUCT_MAIN_IMAGE_D"
+            class="inputbox"
+            size="60"
+            default=""
+            preview="true"
+        />
+        <field
+            name="thumbimage"
+            type="media" 
+            directory="poecom/products/thumb"
+            label ="COM_POECOM_PRODUCT_THUMB_IMAGE" 
+            description="COM_POECOM_PRODUCT_THUMB_IMAGE_D"
+            class="inputbox"
+            size="60"
+            default=""
+            required="false"
+            preview="true"
+        />
+    </fieldset>
+    <fieldset name="shipping" label="COM_POECOM_PRODUCT_SHIPPING">
+        <field
+            name="weightuom"
+            type="uomlist"
+            typefilter="mass"
+            label="COM_POECOM_PRODUCT_WEIGHT_UOM"
+            description="COM_POECOM_PRODUCT_WEIGHT_UOM_D"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+        <field
+            name="weight"
+            type="text"
+            label="COM_POECOM_PRODUCT_WEIGHT"
+            description="COM_POECOM_PRODUCT_WEIGHT_D"
+            size="5"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+        <field
+            name="dimuom"
+            type="uomlist"
+            typefilter="length"
+            label="COM_POECOM_PRODUCT_DIMENSION_UOM"
+            description="COM_POECOM_PRODUCT_DIMENSION_UOM_D"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+        <field
+            name="length"
+            type="text"
+            label="COM_POECOM_PRODUCT_LENGTH"
+            description=""
+            size="5"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+        <field
+            name="width"
+            type="text"
+            label="COM_POECOM_PRODUCT_WIDTH"
+            description=""
+            size="5"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+        <field
+            name="height"
+            type="text"
+            label="COM_POECOM_PRODUCT_HEIGHT"
+            description=""
+            size="5"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+    </fieldset>
+    <fieldset name="options" label="COM_POECOM_PRODUCT_OPTIONS">
+        <field
+            name="generateoptions"
+            type="optionsetlist"
+            label="COM_POECOM_PRODUCT_OPTIONSET_GENERATE"
+            description="COM_POECOM_PRODUCT_OPTIONSET_GENERATE_D"
+            onchange="resetProduct()"
+        />
+        <field
+            name="copyoptions"
+            type="productlistmodal"
+            label="COM_POECOM_PRODUCT_COPY_OPTIONS"
+            description="COM_POECOM_PRODUCT_COPY_OPTIONS_D"
+            onchange="resetOptionSet()"
+        />
+        <field
+            name="appendoptions"
+            type="radio"
+            label="COM_POECOM_PRODUCT_APPEND_OPTIONS"
+            description="COM_POECOM_PRODUCT_APPEND_OPTIONS_D"
+            default="0"
+        >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+    <fieldset name="hidden">
+      <field name="id" type="hidden" />
+    </fieldset>   
+</form>

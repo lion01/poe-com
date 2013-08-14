@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_poecom/models/rules">
+    <fieldset name="details" label="COM_POECOM_RG_DETAILS">
+    <field
+        name="id"
+        type="hidden"
+    />
+    <field
+        name="name"
+        type="text"
+        label="COM_POECOM_RG_NAME"
+        description=""
+        class="inputbox"
+        required="true"
+        size="80"
+        default=""
+    />
+    <field
+        name="category_id"
+        type="productcategorylist"
+        extension="com_poecom"
+        class="inputbox"
+        default=""
+        multiple="true"
+        published="1"
+        label="COM_POECOM_PRODUCT_CATID"
+        description="COM_POECOM_PRODUCT_CATID_D"
+        required="true"
+    >
+        <option value="0">JOPTION_SELECT_CATEGORY</option>
+    </field>
+    <field
+        name="default"
+        type="radio" 
+        label ="COM_POECOM_RG_DEFAULT"
+        description="COM_POECOM_RG_DEFAULT_D" 
+        class="inputbox"
+        required="true"
+        default="0"
+        onchange="setDefaultGroup()"
+    >
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+    </field>
+    <field
+        name="enabled"
+        type="radio" 
+        label ="COM_POECOM_ENABLED"
+        description="" 
+        class="inputbox"
+        required="true"
+        default="1"
+    >
+        <option value="0">JNO</option>
+        <option value="1">JYES</option>
+    </field>
+    </fieldset>
+</form>
